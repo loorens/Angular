@@ -10,7 +10,10 @@
 		</div>
 		<div ng-controller='CartController'>
 			<h2>Orders</h2>
-			
+			<input ng-model='item.title'>
+			<input ng-model='item.qnt'>
+			<input ng-model='item.price'>
+			<button ng-click='add(item)'>Add</button>
 			<div ng-repeat='item in items'>
 				<span>{{item.title}}</span>
 				<input ng-model='item.qnt'>

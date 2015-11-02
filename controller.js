@@ -12,7 +12,14 @@ testApp.controller('CartController', function ($scope){
 		{title: "piwo", qnt: 15, price: 5}
 	];
 	
+	$scope.item = {title: "test", qnt: 1, price: 10}
+	
 	$scope.remove = function(index){
 		$scope.items.splice(index,1);
+	}
+	
+	$scope.add = function(item){
+		var itemm = {title:item.title, qnt:item.qnt, price:item.price};
+		$scope.items.splice(0,0,itemm);
 	}
 });
