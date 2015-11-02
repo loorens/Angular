@@ -5,7 +5,19 @@
 	</head>
 	<body>
 		<div ng-controller='HelloController'>
+			<input ng-model='greeting.text'>
 			<p>{{greeting.text}} Hello</p>
+		</div>
+		<div ng-controller='CartController'>
+			<h2>Orders</h2>
+			
+			<div ng-repeat='item in items'>
+				<span>{{item.title}}</span>
+				<input ng-model='item.qnt'>
+				<span>{{item.price}} PLN</span>
+				<span>{{item.price * item.qnt}} PLN</span>
+				<button ng-click='remove($index)'>Remove</button>
+			</div>
 		</div>
 	</body>
 </html>
